@@ -24,8 +24,6 @@ class EMV2Conversation {
     private String name;
     // 未读数
     private int unreadCount;
-    // 已读时间戳
-    private int readMs;
     // 获取所有消息数
     private int allMsgCount;
     // 会话免打扰状态

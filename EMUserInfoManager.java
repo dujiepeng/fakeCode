@@ -16,19 +16,21 @@ public class EMUserInfoManager<T> extends EMBaseManager<T> {
 
     // 设置成功后 [EMUserInfoListener.currentUserInfoChanged] 会执行。
     // 设置后需要存到本地
-    public void uploadSelfInfo(EMFullUserInfo info, EMCallback callback) {
+    public void uploadSelfInfo(EMFullUserInfo info, EMValueCallback<EMFullUserInfo> callback) {
+        // TODO upload
         database.saveCurrentUserInfo(info);
         currInfo = info;
-        callback.onSuccess();
+        callback.onSuccess(currInfo);
     }
 
     // sdk 自动后自动获取。
-    public void fetchSelfInfo(EMCallback callback) {
+    public void fetchSelfInfo(EMValueCallback<EMFullUserInfo> callback) {
         // TODO:
         // 1. fetch server.
         // 2. update currInfo
         new Thread(()->{
             currInfo = syncFetchSelfInfo();
+            callback.onSuccess(currInfo);
         }).run();
     }
 

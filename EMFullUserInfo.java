@@ -2,6 +2,7 @@ package com.hyphenate.myapplication.code;
 
 
 import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
 
 public class EMFullUserInfo extends EMUserInfo{
 
@@ -11,11 +12,38 @@ public class EMFullUserInfo extends EMUserInfo{
         return "";
     }
 
-    public void setFriendAllowType(FriendAllowType type) {
+    private FriendAllowType friendAllowType;
+
+    private GroupAllowType groupAllowType;
+
+    private String pushTranslationLanguage;
+
+    @Nullable
+    public String getPushTranslationLanguage() {
+        return pushTranslationLanguage;
+    }
+
+    @Nullable
+    public FriendAllowType getFriendAllowType() {
+        return friendAllowType;
+    }
+
+
+    @Nullable
+    public GroupAllowType getGroupAllowType() {
+        return  groupAllowType;
+    }
+
+
+    public void setPushTranslationLanguage(@Nullable String language) {
+        //  设置推送首选语言
+    }
+
+    public void setFriendAllowType(@NonNull FriendAllowType type) {
         // 设置好友申请规则
     }
 
-    public void setGroupAllowType(GroupAllowType type) {
+    public void setGroupAllowType(@NonNull GroupAllowType type) {
 
     }
 }
