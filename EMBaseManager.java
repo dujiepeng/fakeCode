@@ -1,5 +1,7 @@
 package com.hyphenate.myapplication.code;
 
+import com.hyphenate.myapplication.code.EMDatabase;
+
 import java.util.HashMap;
 import java.util.Map;
 

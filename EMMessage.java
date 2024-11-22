@@ -15,6 +15,7 @@ public class EMMessage {
     protected String groupName;
     protected String groupFaceURL;
     public String from;
+    public String conversationId;
 
     //...
     @Nullable

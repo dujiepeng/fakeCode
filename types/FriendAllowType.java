@@ -1,4 +1,4 @@
-package com.hyphenate.myapplication.code;
+package com.hyphenate.myapplication.code.types;
 
 public enum FriendAllowType {
 

@@ -1,5 +1,10 @@
 package com.hyphenate.myapplication.code;
 
+import com.hyphenate.myapplication.code.EMCallback;
+import com.hyphenate.myapplication.code.EMClient;
+import com.hyphenate.myapplication.code.EMFullUserInfo;
+import com.hyphenate.myapplication.code.EMMessage;
+
 public class EMChatManager {
     public void sendMessage(EMMessage msg, EMCallback callback) {
         EMFullUserInfo info = EMClient.shared().userInfoManager.currInfo;

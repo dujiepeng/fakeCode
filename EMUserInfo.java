@@ -1,7 +1,5 @@
 package com.hyphenate.myapplication.code;
 
-import android.view.LayoutInflater;
-
 public class EMUserInfo {
     String avatar;
     String nickname;

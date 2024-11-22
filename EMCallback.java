@@ -1,6 +1,6 @@
 package com.hyphenate.myapplication.code;
 
-interface EMCallback {
+public interface EMCallback {
     void onError(EMError error);
 
     void onSuccess();
@@ -8,7 +8,7 @@ interface EMCallback {
 
 
 
-interface EMValueCallback<T> {
+public interface EMValueCallback<T> {
     void onError(EMError error);
 
     void onSuccess(T value);

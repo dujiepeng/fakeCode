@@ -1,4 +1,4 @@
 package com.hyphenate.myapplication.code;
 
-public class EMGroupInfo {
+public class EMCursorResult<T> {
 }

@@ -1,11 +1,6 @@
-package com.hyphenate.myapplication.code;
+package com.hyphenate.myapplication.code.types;
 
-enum EMConversationType {
-    Chat, GroupChat
-}
-
-
-enum EMNotifyType {
+public enum EMNotifyType {
     UnKnow(-1),
     Mute(1),
     UnMute(2),
@@ -21,5 +16,3 @@ enum EMNotifyType {
         return id;
     }
 }
-
-enum EMMarkType {}

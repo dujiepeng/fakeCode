@@ -9,12 +9,13 @@ public class EMClient {
 
     public EMUserInfoManager userInfoManager;
     public EMGroupManager groupManager;
+    public EMContactManager contactManager;
 
     private EMDatabase database;
 
     private EMConnectCallback connectCallback;
 
-    static EMClient shared() {
+    public static EMClient shared() {
         if (emClient == null) {
             emClient = new EMClient();
         }
@@ -26,10 +27,11 @@ public class EMClient {
 
     }
 
-    public void init(Context context) {
+    public void init(Context context, EMOptions options) {
         EMContextHandler.initialize(context);
         userInfoManager = new EMUserInfoManager<EMUserInfo>();
-        groupManager = new EMGroupManager<EMGroupInfo>();
+        groupManager = new EMGroupManager<EMGroupOverview>();
+        contactManager = new EMContactManager<EMContact>();
     }
 
     public void connect(String userId, String token, EMConnectCallback callback) throws HyphenateException{
